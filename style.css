@@ -80,12 +80,13 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: antiquewhite;
+  background-color: #f77f00;
   min-height: 6rem;
   padding: 0 3rem;
 }
 
 .logo {
+  width: 15rem;
   font-size: 2.4rem;
 }
 
@@ -95,20 +96,37 @@ ul {
   gap: 3rem;
 }
 
+.btn {
+  font-size: 1.5rem;
+  border: 3px solid #fcbf49;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+}
+
+.btn-container {
+  display: flex;
+  gap: 2rem;
+}
+
 /*-------------------SECTION HERO----------------------- */
 /*-------------------SECTION HERO----------------------- */
 .section-hero {
-  max-width: 140rem;
   margin-inline: auto;
+  background: url(images/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.hero-img {
+  max-height: 80%;
 }
 
 .hero-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.hero-description {
+  text-align: center;
+  max-width: 140rem;
+  min-height: 100vh;
   margin: auto;
+  padding-top: 40rem;
 }
 
 .sub-heading {
