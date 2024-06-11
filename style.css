@@ -74,6 +74,11 @@ ul {
 }
 /* CSS RESET */
 
+.container {
+  max-width: 140rem;
+  margin-inline: auto;
+}
+
 /*-------------------primary-header--------------------- */
 /*-------------------primary-header--------------------- */
 .primary-header {
@@ -81,8 +86,11 @@ ul {
   justify-content: space-between;
   align-items: center;
   /* background-color: #f77f00; */
-  min-height: 6rem;
+  min-height: 8rem;
   padding: 0 3rem;
+  background-color: #ffffff49;
+
+  /* color: #ee9b00; */
 }
 
 .logo {
@@ -92,7 +100,9 @@ ul {
 
 .nav-list {
   display: flex;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
   gap: 3rem;
 }
 
@@ -118,6 +128,7 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin-bottom: 8rem;
 }
 
 .hero-img {
@@ -150,6 +161,104 @@ ul {
 .btn-header {
   font-size: 2.2rem;
   font-weight: 500;
+}
+
+/*-------------------SECTION FEATURES--------------------- */
+/*-------------------SECTION FEATURES--------------------- */
+.features-haeding {
+  margin-bottom: 4rem;
+  /* text-align: center; */
+}
+
+.heading-secondary {
+  font-size: 4rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--2-cols {
+  grid-template-columns: 1fr 1fr;
+}
+
+.step-text-box {
+  padding: 3rem;
+}
+
+.step-number {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #a4a4a4;
+}
+
+.tertiary-heading {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.step-description {
+  font-size: 2rem;
+}
+
+.step-img-box {
+  padding: 3rem;
+}
+
+.features {
+  margin-bottom: 8rem;
+}
+
+/*-------------------SECTION PRICING--------------------- */
+/*-------------------SECTION PRICING--------------------- */
+.plans-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 8rem;
+}
+
+.pricing-haeding {
+  margin-bottom: 6rem;
+}
+
+.plan-card {
+  padding: 2rem;
+  box-shadow: 0px 5px 10px #a1a1a1;
+  border-radius: 2rem;
+  margin: 2rem;
+}
+
+.card-pricing {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #a2a2a2;
+}
+
+.pricing-heading {
+  font-size: 2.5rem;
+}
+
+.plan-price {
+  font-size: 3rem;
+}
+
+.dollar {
+  font-size: 1.6rem;
+}
+
+.every-month {
+  font-size: 1.8rem;
+}
+
+.plan-description {
+  font-size: 1.4rem;
+  margin-bottom: 1.8rem;
+}
+
+.card-futures-list {
+  font-size: 1.6rem;
+  line-height: 3;
 }
 
 /*----------------------FOOTER-------------------------- */
