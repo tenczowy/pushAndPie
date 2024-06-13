@@ -261,6 +261,68 @@ ul {
   line-height: 3;
 }
 
+/*----------------------SECTION REVIEWS-------------------------- */
+/*----------------------SECTION REVIEWS-------------------------- */
+.section-reviews {
+  padding: 8rem 3rem;
+  background-color: #52b788;
+}
+
+.reviews-haeding {
+  margin-bottom: 6rem;
+}
+
+.testimonials-box {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  column-gap: 2rem;
+  max-width: 90rem;
+  padding: 3rem 5rem;
+  border: 5px solid #347e5c;
+  border-radius: 2rem;
+}
+
+.testimonial-name {
+  font-size: 2rem;
+}
+
+.testimonial-occupation {
+  font-size: 1.6rem;
+  border-bottom: 2px solid #255a42;
+}
+
+.testimonial-description {
+  font-size: 1.6rem;
+  padding: 2rem 0;
+  padding-right: 5rem;
+  line-height: 2;
+}
+
+.image-holder {
+  display: grid;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.testimonial-btn {
+  position: absolute;
+  font-size: 5rem;
+  /* stroke: #07120d; */
+}
+
+.right-btn {
+  right: 0;
+  top: calc(50% - 2.5rem);
+}
+
+.left-btn {
+  top: calc(50% - 2.5rem);
+}
+
 /*----------------------FOOTER-------------------------- */
 /*----------------------FOOTER-------------------------- */
 .primary-footer {
