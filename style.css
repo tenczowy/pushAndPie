@@ -120,11 +120,21 @@ ul {
   letter-spacing: 1px;
 }
 
+.hamburger-menu {
+  font-size: 5rem;
+}
+
+.btn-mobile-menu {
+  border: none;
+  background: none;
+}
+
 /*-------------------SECTION HERO----------------------- */
 /*-------------------SECTION HERO----------------------- */
 .section-hero {
   margin-inline: auto;
-  background: url(images/hero.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(images/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -137,6 +147,7 @@ ul {
 
 .hero-description {
   padding: clamp(2rem, 25vw, 30rem);
+  color: #f77f00;
 }
 
 .hero-container {
@@ -161,6 +172,7 @@ ul {
 .btn-header {
   font-size: 2.2rem;
   font-weight: 500;
+  color: #f77f00;
 }
 
 /*-------------------SECTION FEATURES--------------------- */
@@ -213,6 +225,7 @@ ul {
 /*-------------------SECTION PRICING--------------------- */
 .plans-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 8rem;
 }
@@ -283,7 +296,6 @@ ul {
 .slide {
   position: absolute;
   top: 0;
-  height: 25rem;
   display: grid;
   grid-template-columns: 100px 1fr;
   column-gap: 2rem;
@@ -336,7 +348,19 @@ ul {
 
 /*----------------------FOOTER-------------------------- */
 /*----------------------FOOTER-------------------------- */
-.primary-footer {
-  text-align: center;
-  background-color: #a1a1a1;
+
+.footer-link {
+  font-size: 1.6rem;
+}
+
+.footer-link > a {
+  color: #347e5c;
+}
+
+.footer-link > a:hover {
+  border-bottom: 2px solid #347e5c;
+}
+
+.footer-link > a:active {
+  color: red;
 }

@@ -1,0 +1,55 @@
+@media (max-width: 1200px) {
+  .primary-nav,
+  .btn-container {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .step-2 {
+    grid-row-start: 3;
+  }
+}
+
+@media (max-width: 860px) {
+  .slider {
+    height: 30rem;
+  }
+
+  .hero-description {
+    padding: clamp(1rem, 25vw, 10rem);
+  }
+}
+
+@media (max-width: 715px) {
+  .slider {
+    height: 40rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .sub-heading {
+    font-size: 1.6rem;
+  }
+
+  .heading-primary {
+    font-size: 3.5rem;
+  }
+
+  .hero-description {
+    padding: clamp(1rem, 25vw, 5rem);
+  }
+
+  .slider {
+    height: 75rem;
+  }
+
+  .slide {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+}

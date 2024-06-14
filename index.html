@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Push And Pie</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -19,6 +26,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-media.css" />
     <script type="module" defer src="/scripts/script.js"></script>
   </head>
   <body>
@@ -37,6 +45,11 @@
           <div class="btn-container">
             <button class="btn btn-login">LOGIN</button>
             <button class="btn btn-sign-up">SIGN UP</button>
+          </div>
+          <div class="mobile-menu">
+            <button class="btn-mobile-menu">
+              <ion-icon name="menu-outline" class="hamburger-menu"></ion-icon>
+            </button>
           </div>
         </header>
         <div class="hero-container">
@@ -59,7 +72,7 @@
         </div>
         <div class="features container grid grid--2-cols">
           <!-- STEP 1 -->
-          <div class="step-text-box">
+          <div class="step-text-box step-1">
             <p class="step-number">01</p>
             <h3 class="tertiary-heading">Check out your max reps:</h3>
             <p class="step-description">
@@ -72,7 +85,7 @@
           <div class="step-img-box"><img src="images/hero.jpg" alt="" /></div>
           <!-- STEP 2 -->
           <div class="step-img-box"><img src="images/hero.jpg" alt="" /></div>
-          <div class="step-text-box">
+          <div class="step-text-box step-2">
             <p class="step-number">02</p>
             <h3 class="tertiary-heading">Start the recommended program:</h3>
             <p class="step-description">
@@ -84,7 +97,7 @@
           </div>
 
           <!-- STEP 3 -->
-          <div class="step-text-box">
+          <div class="step-text-box step-3">
             <p class="step-number">03</p>
             <h3 class="tertiary-heading">
               Increase or Decrese difficulty if needed:
@@ -254,6 +267,29 @@
         </div>
       </section>
     </main>
-    <footer class="primary-footer">footer</footer>
+    <section class="primary-footer">
+      <div class="container">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item footer-link">
+              <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
+            </li>
+            <li class="nav-item footer-link">
+              <a href="#" class="nav-link px-2 text-body-secondary">Features</a>
+            </li>
+            <li class="nav-item footer-link">
+              <a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
+            </li>
+            <li class="nav-item footer-link">
+              <a href="#" class="nav-link px-2 text-body-secondary">FAQs</a>
+            </li>
+            <li class="nav-item footer-link">
+              <a href="#" class="nav-link px-2 text-body-secondary">About</a>
+            </li>
+          </ul>
+          <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+        </footer>
+      </div>
+    </section>
   </body>
 </html>
