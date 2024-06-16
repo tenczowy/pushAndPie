@@ -3,6 +3,10 @@
   .btn-container {
     display: none;
   }
+
+  .mobile-menu {
+    display: block;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -51,5 +55,15 @@
   .slide {
     grid-template-columns: 1fr;
     row-gap: 3rem;
+  }
+}
+
+@media (max-width: 1070px) {
+  .desctop-pricing {
+    display: none;
+  }
+
+  .plans-container__mobile {
+    display: block;
   }
 }
