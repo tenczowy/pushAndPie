@@ -380,71 +380,51 @@ ul {
 .section-reviews {
   padding: 8rem 3rem;
   background-color: #52b788;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .reviews-haeding {
   margin-bottom: 6rem;
 }
 
-.slider {
-  max-width: 90rem;
+.carousel-btn {
+  border: none;
+  background: none;
+}
+
+.carousel-inner {
+  padding: 10rem;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  color: rgb(22, 22, 22);
+}
+
+.carousel {
+  max-width: 80rem;
   position: relative;
-  height: 25rem;
-
-  /* overflow: hidden; */
 }
 
-.slide {
-  position: absolute;
-  top: 0;
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  column-gap: 2rem;
-  max-width: 90rem;
-  padding: 3rem 5rem;
-  border: 5px solid #347e5c;
-  border-radius: 2rem;
-  transition: transform 1s;
-}
-
-.testimonial-name {
-  font-size: 2.4rem;
-}
-
-.testimonial-occupation {
-  font-size: 1.6rem;
-  border-bottom: 2px solid #255a42;
-}
-
-.testimonial-description {
-  font-size: 1.6rem;
-  padding: 2rem 0;
-  padding-right: 5rem;
-  line-height: 2;
-}
-
-.image-holder {
-  display: grid;
-  align-items: center;
-}
-
-.avatar {
+.slide > img {
+  max-width: 5rem;
   border-radius: 50%;
 }
 
-.testimonial-btn {
-  position: absolute;
-  font-size: 5rem;
-  /* stroke: #07120d; */
+.name-review {
+  font-size: 3rem;
+  font-weight: 600;
 }
 
-.right-btn {
-  right: 0;
-  top: calc(50% - 2.5rem);
+.job-review {
+  font-size: 2.2rem;
+  border-bottom: 1px solid black;
 }
 
-.left-btn {
-  top: calc(50% - 2.5rem);
+.description-review {
+  font-size: 2rem;
 }
 
 /*----------------------ABOUT US-------------------------- */

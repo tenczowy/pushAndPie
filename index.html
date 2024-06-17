@@ -12,6 +12,12 @@
     />
 
     <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
@@ -36,10 +42,10 @@
           <p class="logo">P&P</p>
           <nav class="primary-nav">
             <ul class="nav-list">
-              <li class="nav-link">Features</li>
-              <li class="nav-link">Plans</li>
-              <li class="nav-link">Reviews</li>
-              <li class="nav-link">About Us</li>
+              <li class="nav-link" data-id="features-1">Features</li>
+              <li class="nav-link" data-id="plans-2">Plans</li>
+              <li class="nav-link" data-id="reviews-3">Reviews</li>
+              <li class="nav-link" data-id="aboutus-4">About Us</li>
             </ul>
           </nav>
           <div class="btn-container">
@@ -56,10 +62,10 @@
           </div>
           <div class="hamburger-menu hidden">
             <ul class="nav-list-hamburger">
-              <li class="nav-link">Features</li>
-              <li class="nav-link">Plans</li>
-              <li class="nav-link">Reviews</li>
-              <li class="nav-link">About Us</li>
+              <li class="nav-link" data-id="features-1">Features</li>
+              <li class="nav-link" data-id="plans-2">Plans</li>
+              <li class="nav-link" data-id="reviews-3">Reviews</li>
+              <li class="nav-link" data-id="aboutus-4">About Us</li>
             </ul>
             <div class="btn-container-hamburger">
               <button class="btn btn-modal btn-login">LOGIN</button>
@@ -78,7 +84,7 @@
           </div>
         </div>
       </section>
-      <section class="section-features">
+      <section class="section-features" id="features-1">
         <div class="container features-haeding">
           <p class="sub-heading">#HOW IT WORKS</p>
           <h2 class="heading-secondary">
@@ -127,7 +133,7 @@
           <div class="step-img-box"><img src="images/hero.jpg" alt="" /></div>
         </div>
       </section>
-      <section class="section-plans">
+      <section class="section-plans" id="plans-2">
         <div class="container pricing-haeding">
           <p class="sub-heading">#WHAT IT COSTS</p>
           <h2 class="heading-secondary">
@@ -271,7 +277,7 @@
           </div>
         </div>
       </section>
-      <section class="section-reviews">
+      <section class="section-reviews" id="reviews-3">
         <div class="container reviews-haeding">
           <p class="sub-heading">#WHAT OTHERS SAY</p>
           <h2 class="heading-secondary">
@@ -279,88 +285,75 @@
             Have Partnered with Us.
           </h2>
         </div>
-        <div class="container testimonials-box slider">
-          <!-- SLIDE 1 -->
-          <div class="slide slide-1">
-            <i class="left-btn testimonial-btn"
-              ><ion-icon name="arrow-back-circle-outline"></ion-icon
-            ></i>
-            <div class="image-holder">
-              <img
-                src="images/avatars/alex-suprun.jpg"
-                alt="avatar of client"
-                class="avatar"
-              />
+        <!-- BOOTSTRAP CAROUSEL -->
+        <div
+          id="carouselExampleAutoplaying"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="slide">
+                <img src="images/avatars/alex-suprun.jpg" alt="" srcset="" />
+                <p class="name-review">Alex Suprun</p>
+                <p class="job-review">IT Support</p>
+                <p class="description-review">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+                  ullam, reiciendis officiis, nihil debitis delectus saepe
+                  dolorum eum voluptatem optio ut et ex voluptas sint
+                  exercitationem quisquam inventore, culpa recusandae!
+                </p>
+              </div>
             </div>
-            <div class="testimonial">
-              <h3 class="testimonial-name">Alex Suprun</h3>
-              <p class="testimonial-occupation">IT Support</p>
-              <p class="testimonial-description">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente repudiandae architecto corporis in nesciunt cupiditate
-                molestiae rerum earum! Consectetur suscipit veritatis modi eum
-                perspiciatis non sunt natus at nostrum expedita?"
-              </p>
+            <div class="carousel-item">
+              <div class="slide">
+                <img src="images/avatars/luis-villasmil.jpg" alt="" srcset="" />
+                <p class="name-review">Luis Villasmil</p>
+                <p class="job-review">IT Support</p>
+                <p class="description-review">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+                  ullam, reiciendis officiis, nihil debitis delectus saepe
+                  dolorum eum voluptatem optio ut et ex voluptas sint
+                  exercitationem quisquam inventore, culpa recusandae!
+                </p>
+              </div>
             </div>
-            <i class="right-btn testimonial-btn"
-              ><ion-icon name="arrow-forward-circle-outline"></ion-icon
-            ></i>
+            <div class="carousel-item">
+              <div class="slide">
+                <img src="images/avatars/taras-shypka.jpg" alt="" srcset="" />
+                <p class="name-review">Taras Shypka</p>
+                <p class="job-review">IT Support</p>
+                <p class="description-review">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+                  ullam, reiciendis officiis, nihil debitis delectus saepe
+                  dolorum eum voluptatem optio ut et ex voluptas sint
+                  exercitationem quisquam inventore, culpa recusandae!
+                </p>
+              </div>
+            </div>
           </div>
-          <!-- SLIDE 2 -->
-          <div class="slide slide-2">
-            <i class="left-btn testimonial-btn"
-              ><ion-icon name="arrow-back-circle-outline"></ion-icon
-            ></i>
-            <div class="image-holder">
-              <img
-                src="images/avatars/luis-villasmil.jpg"
-                alt="avatar of client"
-                class="avatar"
-              />
-            </div>
-            <div class="testimonial">
-              <h3 class="testimonial-name">Luis Villasmil</h3>
-              <p class="testimonial-occupation">IT Support</p>
-              <p class="testimonial-description">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente repudiandae architecto corporis in nesciunt cupiditate
-                molestiae rerum earum! Consectetur suscipit veritatis modi eum
-                perspiciatis non sunt natus at nostrum expedita?"
-              </p>
-            </div>
-            <i class="right-btn testimonial-btn"
-              ><ion-icon name="arrow-forward-circle-outline"></ion-icon
-            ></i>
-          </div>
-          <!-- SLIDE 3 -->
-          <div class="slide slide-3">
-            <i class="left-btn testimonial-btn"
-              ><ion-icon name="arrow-back-circle-outline"></ion-icon
-            ></i>
-            <div class="image-holder">
-              <img
-                src="images/avatars/taras-shypka.jpg"
-                alt="avatar of client"
-                class="avatar"
-              />
-            </div>
-            <div class="testimonial">
-              <h3 class="testimonial-name">Taras Shypka</h3>
-              <p class="testimonial-occupation">IT Support</p>
-              <p class="testimonial-description">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente repudiandae architecto corporis in nesciunt cupiditate
-                molestiae rerum earum! Consectetur suscipit veritatis modi eum
-                perspiciatis non sunt natus at nostrum expedita?"
-              </p>
-            </div>
-            <i class="right-btn testimonial-btn"
-              ><ion-icon name="arrow-forward-circle-outline"></ion-icon
-            ></i>
-          </div>
+
+          <button
+            class="carousel-control-prev carousel-btn carousel-btn-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden"></span>
+          </button>
+          <button
+            class="carousel-control-next carousel-btn carousel-btn-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden"></span>
+          </button>
         </div>
       </section>
-      <section class="section-about-us">
+      <section class="section-about-us" id="aboutus-4">
         <div class="about-us-container container">
           <div class="pricing-haeding">
             <p class="sub-heading">#ABOUT US</p>
@@ -384,23 +377,12 @@
     </main>
     <section class="primary-footer">
       <div class="container">
-        <footer class="py-3 my-4">
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item footer-link">
-              <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
-            </li>
-            <li class="nav-item footer-link">
-              <a href="#" class="nav-link px-2 text-body-secondary">Features</a>
-            </li>
-            <li class="nav-item footer-link">
-              <a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
-            </li>
-            <li class="nav-item footer-link">
-              <a href="#" class="nav-link px-2 text-body-secondary">FAQs</a>
-            </li>
-            <li class="nav-item footer-link">
-              <a href="#" class="nav-link px-2 text-body-secondary">About</a>
-            </li>
+        <footer class="py-3 my-4 border-top">
+          <ul class="nav justify-content-center">
+            <li class="footer-link nav-link" data-id="features-1">Features</li>
+            <li class="footer-link nav-link" data-id="plans-2">Pricing</li>
+            <li class="footer-link nav-link" data-id="reviews-3">Reviews</li>
+            <li class="footer-link nav-link" data-id="aboutus-4">About</li>
           </ul>
           <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
         </footer>

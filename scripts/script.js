@@ -1,10 +1,9 @@
 // MOBILE MENU MODAL WINDOW
 const mobileMenuBtn = document.querySelector('.btn-mobile-menu');
 const hambuerMenu = document.querySelector('.hamburger-menu');
+const bodyEl = document.querySelector('body');
 
 mobileMenuBtn.addEventListener('click', (ev) => {
-  const bodyEl = document.querySelector('body');
-
   if (bodyEl.style.overflow === 'hidden') {
     bodyEl.style.overflow = 'visible';
   } else {
@@ -27,4 +26,18 @@ planListEl.addEventListener('click', (e) => {
   });
 
   planTargetEl.classList.remove('hidden');
+});
+
+// SMOOTH SCROLLING
+const linksEl = document.querySelectorAll('.nav-link');
+
+linksEl.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const clickedId = e.target.dataset.id;
+    const sectionEl = document.querySelector(`#${clickedId}`);
+    sectionEl.scrollIntoView({ behavior: 'smooth' });
+    hambuerMenu.classList.add('hidden');
+    bodyEl.style.overflow = 'visible';
+  });
 });
