@@ -457,3 +457,24 @@ ul {
 .footer-link > a:active {
   color: red;
 }
+
+/*----------------------LOGIN FORM-------------------------- */
+/*----------------------LOGIN FORM-------------------------- */
+.login-form,
+.signup-form {
+  font-size: 2rem;
+  color: #f1f1f1;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 26rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: rgb(21, 237, 240);
+  background: radial-gradient(
+    circle,
+    rgba(21, 237, 240, 1) 0%,
+    rgba(29, 21, 21, 1) 100%
+  );
+}
