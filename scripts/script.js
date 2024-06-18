@@ -1,3 +1,5 @@
+import { loginCheck } from './login.js';
+
 // MOBILE MENU MODAL WINDOW
 const mobileMenuBtn = document.querySelector('.btn-mobile-menu');
 const hambuerMenu = document.querySelector('.hamburger-menu');
@@ -47,22 +49,28 @@ linksEl.forEach((link) => {
 });
 
 // LOGIN MODAL WINDOW
-const loginBtnEl = document.querySelector('.btn-login');
-const signupBtnEl = document.querySelector('.btn-sign-up');
+const loginBtnEl = document.querySelectorAll('.btn-login');
+const signupBtnEl = document.querySelectorAll('.btn-sign-up');
 const loginForm = document.querySelector('.login-form');
 const signupForm = document.querySelector('.signup-form');
 const loginBackBtn = document.querySelector('.login-back-btn');
 
-loginBtnEl.addEventListener('click', (e) => {
-  loginForm.classList.remove('hidden');
-  signupForm.classList.add('hidden');
-  disableScrolling();
+loginBtnEl.forEach((el) => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    loginForm.classList.remove('hidden');
+    signupForm.classList.add('hidden');
+    disableScrolling();
+  });
 });
 
-signupBtnEl.addEventListener('click', (e) => {
-  signupForm.classList.remove('hidden');
-  loginForm.classList.add('hidden');
-  disableScrolling();
+signupBtnEl.forEach((el) => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    signupForm.classList.remove('hidden');
+    loginForm.classList.add('hidden');
+    disableScrolling();
+  });
 });
 
 loginBackBtn.addEventListener('click', (e) => {
@@ -71,3 +79,5 @@ loginBackBtn.addEventListener('click', (e) => {
   loginForm.classList.add('hidden');
   signupForm.classList.add('hidden');
 });
+
+// LOGIN

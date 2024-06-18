@@ -33,6 +33,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style-media.css" />
+    <script type="module" defer src="/scripts/login.js"></script>
     <script type="module" defer src="/scripts/script.js"></script>
   </head>
   <body>
@@ -391,25 +392,23 @@
     <!-- LOGIN FORM -->
     <form class="login-form hidden">
       <div class="mb-3">
-        <label for="user-name" class="form-label">User Name</label>
+        <label for="username-login" class="form-label">User Name</label>
         <input
-          type="email"
+          type="text"
           class="form-control"
-          id="exampleInputEmail1"
+          id="username-login"
           aria-describedby="emailHelp"
         />
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="exampleInputPassword1"
-        />
+        <input type="password" class="form-control" id="password-login" />
       </div>
       <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        <input type="checkbox" class="form-check-input" id="checkbox-login" />
+        <label class="form-check-label" for="checkbox-login"
+          >Check me out</label
+        >
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
       <button class="btn btn-primary login-back-btn">Back</button>
@@ -417,11 +416,11 @@
     <!-- SIGN UP FORM -->
     <form class="signup-form hidden">
       <div class="mb-3">
-        <label for="user-name" class="form-label">User Name</label>
+        <label for="username-signup" class="form-label">User Name</label>
         <input
-          type="email"
+          type="text"
           class="form-control"
-          id="exampleInputEmail1"
+          id="username-signup"
           aria-describedby="emailHelp"
         />
       </div>
@@ -430,17 +429,13 @@
         <input
           type="email"
           class="form-control"
-          id="exampleInputEmail1"
+          id="email-signup"
           aria-describedby="emailHelp"
         />
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="exampleInputPassword1"
-        />
+        <input type="password" class="form-control" id="password-signup" />
       </div>
       <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1" />
