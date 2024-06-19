@@ -1,4 +1,23 @@
-import { loginCheck } from './login.js';
+export const users = [
+  {
+    id: 1,
+    username: 'daniel',
+    email: 'daniel@gmail.com',
+    password: '1234',
+  },
+  {
+    id: 2,
+    username: 'sylwek',
+    email: 'sylwek@gmail.com',
+    password: '4321',
+  },
+  {
+    id: 3,
+    username: 'kasia',
+    email: 'kasia@gmail.com',
+    password: '1111',
+  },
+];
 
 // MOBILE MENU MODAL WINDOW
 const mobileMenuBtn = document.querySelector('.btn-mobile-menu');
@@ -47,37 +66,3 @@ linksEl.forEach((link) => {
     disableScrolling();
   });
 });
-
-// LOGIN MODAL WINDOW
-const loginBtnEl = document.querySelectorAll('.btn-login');
-const signupBtnEl = document.querySelectorAll('.btn-sign-up');
-const loginForm = document.querySelector('.login-form');
-const signupForm = document.querySelector('.signup-form');
-const loginBackBtn = document.querySelector('.login-back-btn');
-
-loginBtnEl.forEach((el) => {
-  el.addEventListener('click', (e) => {
-    e.preventDefault();
-    loginForm.classList.remove('hidden');
-    signupForm.classList.add('hidden');
-    disableScrolling();
-  });
-});
-
-signupBtnEl.forEach((el) => {
-  el.addEventListener('click', (e) => {
-    e.preventDefault();
-    signupForm.classList.remove('hidden');
-    loginForm.classList.add('hidden');
-    disableScrolling();
-  });
-});
-
-loginBackBtn.addEventListener('click', (e) => {
-  disableScrolling();
-  e.preventDefault();
-  loginForm.classList.add('hidden');
-  signupForm.classList.add('hidden');
-});
-
-// LOGIN

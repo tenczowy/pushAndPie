@@ -51,7 +51,6 @@
           </nav>
           <div class="btn-container">
             <button class="btn btn-login">LOGIN</button>
-            <button class="btn btn-sign-up">SIGN UP</button>
           </div>
           <div class="mobile-menu">
             <button class="btn-mobile-menu">
@@ -70,7 +69,6 @@
             </ul>
             <div class="btn-container-hamburger">
               <button class="btn btn-modal btn-login">LOGIN</button>
-              <button class="btn btn-modal btn-sign-up">SIGN UP</button>
             </div>
           </div>
         </header>
@@ -81,7 +79,7 @@
               Keep track of your progres,<br />
               make training more effective.
             </h1>
-            <button class="btn btn-header">START NOW</button>
+            <button class="btn btn-header btn-login">START NOW</button>
           </div>
         </div>
       </section>
@@ -390,59 +388,67 @@
       </div>
     </section>
     <!-- LOGIN FORM -->
-    <form class="login-form hidden">
-      <div class="mb-3">
-        <label for="username-login" class="form-label">User Name</label>
-        <input
-          type="text"
-          class="form-control"
-          id="username-login"
-          aria-describedby="emailHelp"
-        />
+    <div class="wrapper hidden">
+      <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+      <div class="form-box login">
+        <p class="form-heading">Login</p>
+        <form action="#" class="login-form">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" class="login-mail" required />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" class="login-password" required />
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox" />Remember me</label>
+            <a href="#">Forgot Password?</a>
+          </div>
+          <button type="submit" class="form-btn form-btn-login">Login</button>
+          <div class="login-register">
+            <p>
+              Don't have an account?<a href="#" class="register-link"
+                >Register</a
+              >
+            </p>
+          </div>
+        </form>
       </div>
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password-login" />
+      <div class="form-box register">
+        <p class="form-heading">Registration</p>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="person"></ion-icon></span>
+            <input type="text" required />
+            <label>Username</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" required />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" required />
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label
+              ><input type="checkbox" />I agree to the terms &
+              conditions.</label
+            >
+          </div>
+          <button type="submit" class="form-btn">Register</button>
+          <div class="login-register">
+            <p>
+              Already have an account?<a href="#" class="login-link">Login</a>
+            </p>
+          </div>
+        </form>
       </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="checkbox-login" />
-        <label class="form-check-label" for="checkbox-login"
-          >Check me out</label
-        >
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <button class="btn btn-primary login-back-btn">Back</button>
-    </form>
-    <!-- SIGN UP FORM -->
-    <form class="signup-form hidden">
-      <div class="mb-3">
-        <label for="username-signup" class="form-label">User Name</label>
-        <input
-          type="text"
-          class="form-control"
-          id="username-signup"
-          aria-describedby="emailHelp"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email Address</label>
-        <input
-          type="email"
-          class="form-control"
-          id="email-signup"
-          aria-describedby="emailHelp"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password-signup" />
-      </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <button class="btn btn-primary login-back-btn">Back</button>
-    </form>
+    </div>
   </body>
 </html>

@@ -1,27 +1,47 @@
-const loginFormEl = document.querySelector('.login-form');
-const usernameEl = document.getElementById('username-login').value;
+import { users } from './script.js';
 
-loginFormEl.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const curUser = loginCheck(usernameEl);
-  console.log(curUser);
+const wrapper = document.querySelector('.wrapper');
+const loginLink = document.querySelector('.login-link');
+const registerLink = document.querySelector('.register-link');
+const loginBtn = document.querySelectorAll('.btn-login');
+const closeLogin = document.querySelector('.icon-close');
+
+const loginForm = document.querySelector('.login-form');
+const loginMail = document.querySelector('.login-mail');
+const loginPassword = document.querySelector('.login-password');
+
+registerLink.addEventListener('click', () => {
+  wrapper.classList.add('active');
 });
 
-// const loginCheck = function (username, password) {};
+loginLink.addEventListener('click', () => {
+  wrapper.classList.remove('active');
+});
 
-// loginCheck('daniel', 'daniel');
+loginBtn.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    wrapper.style.display = 'flex';
+  });
+});
 
-export const loginCheck = function (username, password) {
-  try {
-    const response = fetch('https://jsonplaceholder.typicode.com/users').then(
-      (response) => response.json
-    );
-    console.log(response);
+closeLogin.addEventListener('click', (e) => {
+  wrapper.style.display = 'none';
+  wrapper.classList.remove('active');
+});
 
-    const currentUser = users.find((user) => user.username === username);
+loginForm.addEventListener('submit', (e) => {
+  const insertedEmail = loginMail.value;
+  const insertedPassword = loginPassword.value;
 
-    return currentUser;
-  } catch (err) {
-    throw err;
+  const currUser = users.find(
+    (user) =>
+      user.email.toLowerCase() === insertedEmail.toLowerCase() &&
+      user.password === insertedPassword
+  );
+
+  if (currUser) {
+    loginForm.action = `/dashboard.html`;
+  } else {
+    alert(`Wrong Credentials!`);
   }
-};
+});
