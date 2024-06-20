@@ -30,6 +30,7 @@ closeLogin.addEventListener('click', (e) => {
 });
 
 loginForm.addEventListener('submit', (e) => {
+  e.preventDefault();
   const insertedEmail = loginMail.value;
   const insertedPassword = loginPassword.value;
 
@@ -40,7 +41,8 @@ loginForm.addEventListener('submit', (e) => {
   );
 
   if (currUser) {
-    loginForm.action = `/dashboard.html`;
+    localStorage.setItem('currentUser', JSON.stringify(currUser));
+    window.location.href = '/dashboard.html';
   } else {
     alert(`Wrong Credentials!`);
   }
